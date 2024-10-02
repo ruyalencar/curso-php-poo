@@ -9,25 +9,21 @@ class Luta{
 
 
     public function marcarLuta($l1,$l2){
-        if($l1->getCategoria()  === $l2->getCategoria()){
-            print "----------------------------------------------------------";
-            print "<p>Luta Marcada! </p>";
+        if($l1->getCategoria()  === $l2->getCategoria() && ($l1 != $l2)){
             $this->setAprovada(true);
-            $this->setDesafiado($l2);
-            $this->setDesafiante($l2);
+            $this->desafiado = $l1;
+            $this->desafiante = $l2;
         }else{
-            print "----------------------------------------------------------";
             print "<p>Essa luta não pode ser marcada.</p>";
-            $this->setAprovada(false);
-            $this->setDesafiado(null);
-            $this->setDesafiante(null);
+            $this->aprovada = false;
+            $this->desafiado = null;
+            $this->desafiante = null;
         }
     }
     function lutar(){
-        if($this->getAprovada() == true){
-            print "----------------------------------------------------------";
-            $this->getDesafiado()->apresentar();
-            $this->getDesafiante()->apresentar();
+        if($this->getAprovada()){
+            $this->desafiado->apresentar();
+            $this->desafiante->apresentar();
             $vencedor = rand(0,2);
             switch($vencedor){
                 case 0:

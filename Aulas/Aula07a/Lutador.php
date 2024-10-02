@@ -58,7 +58,7 @@ class Lutador{
         $this->setEmpates($this->getEmpates() + 1);
     }
 
-    private function getNome(){
+    function getNome(){
         return $this->nome;
     }
     private function setNome($no){
@@ -94,10 +94,10 @@ class Lutador{
         $this->setCategoria($this->getPeso());
     }
     
-    private function getCategoria(){
+    function getCategoria(){
         return $this->categoria;
     }
-    private function setCategoria($ca){
+    function setCategoria($ca){
         if($ca < 52.2){
             $this->categoria = "Inválido";
         }elseif ($ca < 70.3){
