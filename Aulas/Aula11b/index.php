@@ -9,12 +9,12 @@
     <main>
         <?php 
         
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Pessoa.php';
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Visitante.php';
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Aluno.php';
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Professor.php';
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Bolsista.php';
-            require_once '/var/www/html/curso-php-poo/Aulas/Aula11b/Classes/Tecnico.php';
+            require_once 'Classes/Pessoa.php';
+            require_once 'Classes/Visitante.php';
+            require_once 'Classes/Aluno.php';
+            require_once 'Classes/Professor.php';
+            require_once 'Classes/Bolsista.php';
+            require_once 'Classes/Tecnico.php';
         
 
 
